@@ -22,13 +22,13 @@ public class Calculator {
                 System.out.printf("%d + %d = %d", num1, num2, num1 + num2);
                 break;
             case "subtraction":
-                System.out.printf("%d + %d = %d", num1, num2, num1 - num2);
+                System.out.printf("%d - %d = %d", num1, num2, num1 - num2);
             case "multiplication":
-                System.out.printf("%d + %d = %d", num1, num2, num1 * num2);
+                System.out.printf("%d * %d = %d", num1, num2, num1 * num2);
             case "divison":
-                System.out.printf("%d + %d = %d", num1, num2, num1 / num2);
+                System.out.printf("%d / %d = %d", num1, num2, num1 / num2);
             case "modulo":
-                System.out.printf("%d + %d = %d", num1, num2, num1 % num2);
+                System.out.printf("%d % %d = %d", num1, num2, num1 % num2);
             default:
                 break;
         }
