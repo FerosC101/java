@@ -62,13 +62,14 @@ public class ToDoListApp {
         System.out.print("Deadline (mm/dd/yyyy): ");
         String deadline = scanner.nextLine();
         tasks.add(new Task(name, priority, deadline));
+        scanner.nextLine();
     }
 
     private static void editTask(Scanner scanner) {
         viewTasks();
         System.out.print("Enter task number to edit: ");
         int taskIndex = scanner.nextInt() - 1;
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         if (taskIndex >= 0 && taskIndex < tasks.size()) {
             System.out.print("New Task Name: ");
@@ -78,6 +79,7 @@ public class ToDoListApp {
             System.out.print("New Deadline (mm/dd/yyyy): ");
             String deadline = scanner.nextLine();
             tasks.set(taskIndex, new Task(name, priority, deadline));
+            scanner.nextLine();
         } else {
             System.out.println("Invalid task number.");
         }
@@ -93,6 +95,7 @@ public class ToDoListApp {
         } else {
             System.out.println("Invalid task number.");
         }
+        scanner.nextLine();
     }
 
     private static void viewTasks() {
@@ -103,5 +106,6 @@ public class ToDoListApp {
                 System.out.println((i + 1) + ". " + tasks.get(i));
             }
         }
+        scanner.nextLine();
     }
 }
