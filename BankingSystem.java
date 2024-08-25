@@ -28,6 +28,7 @@ class Account {
     }
 }
 
+//Had to study a whole day just to understand hashmap API Lmao
 public class BankingSystem {
     private static HashMap<String, Account> accounts = new HashMap<>();
     private static final String FILE_PATH = "accounts.txt";
@@ -43,6 +44,7 @@ public class BankingSystem {
             System.out.println("3. Withdraw");
             System.out.println("4. Check Balance");
             System.out.println("5. Exit");
+            System.out.print("Enter Choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -113,6 +115,7 @@ public class BankingSystem {
         }
     }
 
+    //Had to search this part up
     private static void loadAccounts() throws IOException {
         File file = new File(FILE_PATH);
         if (file.exists()) {
@@ -126,6 +129,7 @@ public class BankingSystem {
         }
     }
 
+    //used for-each for loop here for a more clean code cause I'm currently reading a book about it
     private static void saveAccounts() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH));
         for (String name : accounts.keySet()) {
